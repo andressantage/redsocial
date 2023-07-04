@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lired</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- comente esta parte porque tenia una version antigua de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js" defer=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer=""></script>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body>
+
+<!-- barra de navegacion -->
+<nav class="navbar navbar-expand-lg navbar-dark py-1 navLired">
+  <img class="imgLogo" src="../img/logo.png" alt="">
+  <h1 class="Lired">Lired</h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">            
+      <li class="nav-item d-flex align-items-center">
+        <a class="nav-link" href="../chat"><button type="button" class="btn btn-success botonChat">Chat</button></a>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <a class="nav-link" href="../grupos"><h1 class="menuNav">Grupos</h1></a>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <a class="nav-link" href="../mundo"><h1 class="menuNav">Mundo</h1></a>
+      </li>
+    </ul>
+
+    <div class="d-flex cuadroBuscador">
+      <input class="cajaBuscar" type="text" placeholder="Escribir ...">
+      <img class="imgFlechaBuscar" src="../img/flechaBuscar.png" alt="">
+    </div>
+   
+      <!-- cambiar esta parte para que se inice sesion y en caso de haber iniciado sesion lo dirija a las instrucciones para hacer fecth API -->
+      <div class="nav-link cuadroNombrePerfil ml-auto d-flex justify-content-center align-item-center flex-column">
+        <h1 class="nombrePerfil mb-0">Ximena</h1>
+        <div class="d-flex justify-content-center align-item-center">
+          <img src="../img/flechaPerfil.png" class="flechaPerfil" alt="">
+        </div>
+        
+      </div>
+      
+      <img src="../img/elon.webp" class="ml-2 imagenPefil" alt="">
+  </div>
+</nav>
+
+<!-- Seccion principal -->
+<div class="w-100 d-flex">
+  <!-- Seccion Comunidad -->
+  <div class="cajaComunidad d-flex flex-column px-4">
+    <h1 class="comunidad">Comunidad</h1>
+
+  <div class="barraScroll">
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1 class="notificacionComunidad">+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+
+    <div class="d-flex align-items-center cuadroPersona1">
+      <img src="../img/elon.webp" class="ml-2 imagenComunidad" alt="">
+      <h1>+</h1>
+      <h1 class="nombreComunidad">Elon</h1>
+    </div>
+  </div>
+  </div>
+
+  <!-- Seccion Chat -->
+  <div class="cuadroChat d-flex flex-column px-4">
+    
+    <div class="cuadroNombresChat d-flex flex-row justify-content-between">
+      <h1 class="nombresChat">Brad</h1>
+      <h1 class="nombresChat">Angie</h1>
+    </div>
+
+      <div class="cajaChat barraScroll" id="contenedor">
+          <div class="d-flex align-items-center">
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+            <h1 class="letraMensajeIzq">Hola Angie, te escribo para que me ayudes. Estoy teniendo problemas</h1>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end">
+            <h1 class="letraMensajeDer">Hola</h1>
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+            <h1 class="letraMensajeIzq">Como estas?</h1>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end">
+            <h1 class="letraMensajeDer">Yo bien y tu?</h1>
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+            <h1 class="letraMensajeIzq">Algo estresada</h1>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end">
+            <h1 class="letraMensajeDer">Y eso cuentame?</h1>
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+          </div>
+      
+          <div class="d-flex align-items-center">
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+            <h1 class="letraMensajeIzq">Hola bebe</h1>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end">
+            <h1 class="letraMensajeDer">Hola jaja</h1>
+            <img src="../img/elon.webp" class="ml-2 mr-2 imagenComunidad" alt="">
+          </div>
+      </div>
+
+
+      <div class="azulChat d-flex justify-content-center align-items-center">
+        <input class="inputChat" type="text" placeholder="Escribir...">
+        <img class="imgFlechaBuscar" src="../img/flechaBuscar.png" alt="">
+      </div>
+  </div>
+</div>
+<script>
+var contenedor = document.getElementById("contenedor");
+
+// Función para desplazar la barra de desplazamiento hacia abajo
+function desplazarHaciaAbajo() {
+  contenedor.scrollTop = contenedor.scrollHeight;
+}
+
+// Llamar a la función después de cargar o actualizar la página
+window.addEventListener("load", desplazarHaciaAbajo);
+
+
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

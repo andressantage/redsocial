@@ -1,0 +1,347 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Coiny";
+    src: url("letra/Coiny-Regular.ttf"); /* Reemplaza "Coiny.ttf" con el nombre del archivo de fuente descargado */
+}
+@font-face {
+    font-family: "Outfit";
+    src: url("letra/Outfit-VariableFont_wght.ttf"); /* Reemplaza "Coiny.ttf" con el nombre del archivo de fuente descargado */
+}
+@font-face {
+    font-family: "Comfortaa";
+    src: url("letra/Comfortaa-VariableFont_wght.ttf"); /* Reemplaza "Coiny.ttf" con el nombre del archivo de fuente descargado */
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("letra/Poppins-Regular.ttf"); /* Reemplaza "Coiny.ttf" con el nombre del archivo de fuente descargado */
+}
+body{
+    background: linear-gradient(90deg, #C1DFC4 0%, #DEECDD 100%);
+}
+
+/* Navegacion */
+.navLired{
+    background-color: #fcffdd !important;
+    border-bottom: 4px solid black;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.imgLogo{
+    width: 60px;
+    height: 60px;    
+}
+.Lired{
+    color: black !important;
+    font-family: 'Coiny';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 64px; */
+    font-size: 40px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+.botonChat{
+    background: #CFEDED;
+    border: 0px ;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
+    mix-blend-mode: normal;
+}
+.menuNav{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
+    mix-blend-mode: normal;
+    margin-bottom: 0px;
+}
+.cuadroBuscador{
+    padding-left: 1rem;
+}
+.cajaBuscar{
+    width: 320px;
+    height: 53px;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    border: 0px solid transparent;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding-left: 1rem;
+}
+.imgFlechaBuscar{
+    width: 57px;
+    height: 50px;
+}
+.cuadroNombrePerfil{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.nombrePerfil{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 40px; */
+    font-size: 30px;
+    line-height: 35px;
+    /* identical to box height */
+    color: #000000;
+}
+.flechaPerfil{
+    width: 42px;
+    height: 15px;
+}
+.imagenPefil{
+    width: 66px;
+    height: 66px;
+    border-radius: 100%;
+    border: 2px solid #FF0000;
+    margin-right: 0.5rem;
+}
+
+/* Comunidad */
+.cajaComunidad{
+    width: 347px;
+    /* height: 780px; */
+    height: 560px;
+    /* background: linear-gradient(0deg, rgba(249, 246, 246, 0.71), rgba(249, 246, 246, 0.71)), rgba(255, 255, 255, 0.36);
+    */
+    background: white;
+    border-radius: 30px;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.comunidad{
+    font-family: 'Coiny';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #000000;
+    margin-top: 0.5rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #000000;
+}
+/* .cuadroPersona{
+    width: auto;
+    height: 130px;
+
+    background: #FCFFDD;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+}
+.cuadroPersona1{
+    width: auto;
+    height: 130px;
+
+    background: #CFEDED;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+}
+.imagenComunidad{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid #FF0000;
+    margin-left: 1.5rem;
+}
+.notificacionComunidad{
+    width: 1rem;
+} */
+.cuadroPersona{
+    width: auto;
+   /*  height: 130px; */
+    height: 80px;
+
+    background: #FCFFDD;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+}
+.cuadroPersona1{
+    width: auto;
+    /* height: 130px; */
+    height: 80px;
+    background: #CFEDED;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+}
+.imagenComunidad{
+    /* width: 100px;
+    height: 100px; */
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 2px solid #FF0000;
+    margin-left: 1.5rem;
+}
+.notificacionComunidad{
+    width: 1rem;
+}
+.nombreComunidad{
+    font-family: 'Coiny';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
+}
+/* de la parte del scroll en comunidad*/
+.barraScroll{
+    overflow: auto;
+}
+.barraScroll::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento vertical */
+    height: 2px !important;
+}
+/* Estilos para el pulgar (la parte que se arrastra) de la barra de desplazamiento */
+.barraScroll::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de fondo del pulgar */
+    border-radius: 3px; /* Borde redondeado del pulgar */
+}
+/* Estilos para el pulgar al pasar el ratón por encima */
+.barraScroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color de fondo del pulgar al pasar el ratón por encima */
+}
+
+
+/* Chat */
+.cuadroChat{
+   /*  width: 970px; */
+    width: 950px;
+    /* height: 777px; */
+    height: 560px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    margin-left: 1.9rem;
+    margin-top: 0.5rem;
+}
+.cuadroNombresChat{
+    margin-top: 0.5rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #000000;
+}
+.nombresChat{
+    font-family: 'Coiny';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+
+    color: #000000;
+    margin-top: 0rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+}
+.cajaChat{
+    width: auto;
+    background: #FCFFDD;
+    border-radius: 10px;
+    height: 420px;
+}
+.azulChat{
+    width: auto;
+    height: auto;
+    background: #CFEDED;
+    border-radius: 10px;
+    margin-top: 0.3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.inputChat{
+    width: 740px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    border: 1px;
+
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding-left: 1rem;
+}
+
+/* .cuadroMensajeIzquierda{
+    width: auto;
+    background: #FCFFDD;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+} */
+
+.letraMensajeDer{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 40px;
+
+color: #000000;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14)), #FFFFFF;
+border-radius: 10px;
+padding-left: 1rem;
+padding-right: 0.5rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.letraMensajeIzq{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    
+    color: #000000;
+    background: rgba(169, 168, 168, 0.3);
+border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Ejempo para hacer mediaQuerie
+@media (max-width: 200px){
+.imgModal{
+    height: 120px;
+    width: 147px;
+}
+} */
