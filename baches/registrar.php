@@ -40,7 +40,7 @@ $persona=new Persona($_POST['nombres'], $_POST['apellidos'], $_POST['foto'], $_P
 $correo = mysqli_real_escape_string($con, $persona->correo); 
 
 // Verificar si el usuario ya existe en la base de datos
-$existQuery = "SELECT correo FROM usuarios WHERE correo = '$correo'";
+$existQuery = "SELECT email FROM usuario WHERE email = '$correo'";
 $result = mysqli_query($con, $existQuery);
 
 if (mysqli_num_rows($result) > 0) {
@@ -48,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
   echo "El usuario ya existe"; //Revisar como se hara esta parte
 } else {
   // Insertar el nuevo usuario en la base de datos
-  $query = "INSERT INTO usuarios (nombres, apellidos, foto, correo, contraseña, fecha_registro) VALUES ('$persona->nombres', '$persona->apellidos', '$persona->foto', '$correo', '$persona->contraseña', NOW())";
+  $query = "INSERT INTO usuario (nombres, apellidos, imagen, email, clave, fecha_registro) VALUES ('$persona->nombres', '$persona->apellidos', '$persona->foto', '$correo', '$persona->contraseña', NOW())";
 
   if (mysqli_query($con, $query)) {
     // Obtener el ID generado automáticamente
@@ -59,8 +59,9 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['idUsuario'] = $idUsuario;
     $_SESSION['correo'] = $correo;
     $_SESSION['nombres'] = $persona->nombres;
+    $_SESSION['imagen'] = $row['imagen'];
 
-    header("location: ../mundo.html");
+    header("location: ../mundo");
   } else {
     echo "Error al guardar el contenido: " . mysqli_error($con);
   }

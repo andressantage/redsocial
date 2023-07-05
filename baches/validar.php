@@ -23,10 +23,10 @@ class Registro{
 $registro=new Registro($_POST['correo'], $_POST['contraseña']);
 
 // Escapar el valor del correo para evitar inyección de SQL
-$correo = mysqli_real_escape_string($con, $persona->correo); 
+$correo = mysqli_real_escape_string($con, $registro->correo); 
 
 // Verificar si el usuario ya existe en la base de datos
-$consulta = "SELECT * FROM usuarios WHERE correo='$correo' AND contra='$registro->contraseña'";
+$consulta = "SELECT * FROM usuario WHERE email='$correo' AND clave='$registro->contraseña'";
 
 //FORMAS DE HACKEAR CON INJECTION DE SQL
 //$consulta = "SELECT * FROM usuarios WHERE correo='' AND contra='' -- ";
@@ -45,9 +45,10 @@ if ($result->num_rows === 1) {
     $_SESSION['idUsuario'] = $idUsuario;
     $_SESSION['correo'] = $row['correo'];
     $_SESSION['nombre'] = $row['nombre'];
+    $_SESSION['imagen'] = $row['imagen'];
 
     // Redirigir al usuario a la página de bienvenida
-    header("Location: ../mundo.html"); 
+    header("Location: ../mundo"); 
     exit();
 } else {
     header("Location: ../index.php?error=1");

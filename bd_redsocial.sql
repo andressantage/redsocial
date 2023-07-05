@@ -30,27 +30,29 @@ CREATE TABLE `comentarios` (
 --
 -- Estructura de tabla para la tabla `login`
 --
-
-CREATE TABLE `login` (
+-- NOTA: Considere eliminar esta tabla debido a causas como tener mejor la base de datos de cada usuario en una sola tabla
+/* CREATE TABLE `login` (
   `id` int(11) NOT NULL,
   `Usuario` varchar(120) NOT NULL,
   `Clave` varchar(120) NOT NULL,
   `fk_IdUsuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; */
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `publicaciones`
 --
-
+-- NOTA: se modifico
+-- Imagenes para mayor extension debido a los link o nombre
+-- Palabras_clave se cambio a DEFAULT NULL debido a ciertas consideraciones
 CREATE TABLE `publicaciones` (
   `id` int(11) NOT NULL,
   `Titulo` varchar(120) NOT NULL,
   `Contenido` text NOT NULL,
-  `Imagenes` varchar(120) NOT NULL,
+  `Imagenes` varchar(1000) NOT NULL,
   `Categoria` varchar(120) NOT NULL,
-  `Palabras_clave` varchar(120) NOT NULL,
+  `Palabras_clave` varchar(120) DEFAULT NULL,
   `fk_IdUsuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -71,14 +73,20 @@ CREATE TABLE `reacciones` (
 --
 -- Estructura de tabla para la tabla `usuario`
 --
-
+-- NOTA: se cambio
+-- email debido a que pueden haber correos mas extensos
+-- imagen debido a nombres extensos
+-- se agrego aqui la columna clave por el login
+-- se agrego la columna fecha_registro como para saber la antiguedad del usuario
+-- se elimino la columna `telefono` varchar(50) NOT NULL, porque probablemente no se solicitara
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nombres` varchar(120) NOT NULL,
   `apellidos` varchar(120) NOT NULL,
-  `email` varchar(120) NOT NULL,
-  `telefono` varchar(50) NOT NULL,
-  `imagen` varchar(120) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `clave` varchar(120) NOT NULL,
+  `imagen` varchar(1000) NOT NULL,
+  `fecha_registro` DATETIME NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -96,9 +104,10 @@ ALTER TABLE `comentarios`
 --
 -- Indices de la tabla `login`
 --
-ALTER TABLE `login`
+-- NOTA: se comenta debido a que no se usara login
+/* ALTER TABLE `login`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_IdUsuario` (`fk_IdUsuario`);
+  ADD KEY `fk_IdUsuario` (`fk_IdUsuario`); */
 
 --
 -- Indices de la tabla `publicaciones`
