@@ -1,5 +1,5 @@
 <?php
-// Conexión a la base de datos
+// Conexión sda la base de datos
 include("conexion.php");
 $con=conectar();
 
@@ -24,17 +24,10 @@ class Persona{
         $this->correo=$correo;
         $this->contraseña=$contraseña; //de pronto la ñ genere problemas revisare, ya revise y dice que no
     }
-    /*  public function getNombres(){
-        return $this->nombres;
-    }
-
-    public function setNombres($nombres){
-        $this->nombres=$nombres;
-    }*/
 }
 
 // Obtencion de valores del formulario
-$persona=new Persona($_POST['nombres'], $_POST['apellidos'], $_POST['foto'], $_POST['correo'], $_POST['contraseña']);
+$persona=new Persona($_POST['nombres'], $_POST['apellidos'], '', $_POST['correo'], $_POST['contraseña']);
 
 // Escapar el valor del correo para evitar inyección de SQL
 $correo = mysqli_real_escape_string($con, $persona->correo); 
@@ -47,23 +40,32 @@ if (mysqli_num_rows($result) > 0) {
   // El usuario ya existe, mostrar mensaje de error
   echo "El usuario ya existe"; //Revisar como se hara esta parte
 } else {
-  // Insertar el nuevo usuario en la base de datos
-  $query = "INSERT INTO usuario (nombres, apellidos, imagen, email, clave, fecha_registro) VALUES ('$persona->nombres', '$persona->apellidos', '$persona->foto', '$correo', '$persona->contraseña', NOW())";
+  
+  // Pone link para la imagen
+  $extension = pathinfo(basename($_FILES["foto"]["name"]), PATHINFO_EXTENSION);
+  $nombreSinExtension = pathinfo(basename($_FILES["foto"]["name"]), PATHINFO_FILENAME);
+  $miStringSinEspacios = preg_replace('/\s+/', '', $nombreSinExtension);
 
-  if (mysqli_query($con, $query)) {
+  $palabras = explode(' ', $persona->nombres);
+  $primerNombre = $palabras[0];
+
+  $target_file = "uploads/" . "$primerNombre" . "_" . $miStringSinEspacios . "." . $extension;
+  // Insertar el nuevo usuario en la base de datos
+  $query = "INSERT INTO usuario (nombres, apellidos, imagen, email, clave, fecha_registro) VALUES ('$persona->nombres', '$persona->apellidos', '$target_file', '$correo', '$persona->contraseña', NOW())";
+
+  if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file) and mysqli_query($con, $query)) {
     // Obtener el ID generado automáticamente
     $idUsuario = mysqli_insert_id($con);
-
     // Establecer variables de sesión
     session_start();
     $_SESSION['idUsuario'] = $idUsuario;
     $_SESSION['correo'] = $correo;
     $_SESSION['nombres'] = $persona->nombres;
-    $_SESSION['imagen'] = $row['imagen'];
+    $_SESSION['imagen'] = $target_file;
 
-    header("location: ../mundo");
+    header("location: ../chat");
   } else {
-    echo "Error al guardar el contenido: " . mysqli_error($con);
+    echo "Error con el registro: " . mysqli_error($con);
   }
 }
 

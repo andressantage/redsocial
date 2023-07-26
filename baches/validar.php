@@ -37,18 +37,15 @@ if ($result->num_rows === 1) {
     // Las credenciales son válidas, obtener el nombre de usuario
     $row = $result->fetch_assoc();
 
-    // Obtener el ID generado automáticamente
-    $idUsuario = mysqli_insert_id($con);
-
     // Establecer variables de sesión
     session_start();
-    $_SESSION['idUsuario'] = $idUsuario;
-    $_SESSION['correo'] = $row['correo'];
-    $_SESSION['nombre'] = $row['nombre'];
+    $_SESSION['idUsuario'] = $row['id'];
+    $_SESSION['correo'] = $row['email'];
+    $_SESSION['nombres'] = $row['nombres'];
     $_SESSION['imagen'] = $row['imagen'];
 
     // Redirigir al usuario a la página de bienvenida
-    header("Location: ../mundo"); 
+    header("Location: ../chat"); 
     exit();
 } else {
     header("Location: ../index.php?error=1");

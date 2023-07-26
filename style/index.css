@@ -1,3 +1,6 @@
+#ultimo+div{
+    visibility: hidden;
+}
 /* General */
 *{
     margin: 0;
@@ -95,61 +98,26 @@ body{
     background: #C1DFC4;
 }
 
-.main-rounded{
-    border-radius: 53px;
-}
-
 .interactive-card{
     color: #000;
     font-size: 2.6vw;
     font-weight:500;
-
+    border-radius: 53px;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .rounded-photos{
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-}
-
-
-
-.photos-wrapper--1{
-    position: relative;
-    top:20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
-}
-
-.photos-wrapper--2{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
-
-.photos-wrapper--3{
-    top: 180px;
-    right: 5px;
-
-}
-.rounded-photos-1{
-    margin-right: 10px;
-}
-
-.sub-card{
-    font-family: 'Coiny';
-    display: none;
+    width: 400px;
+    height: 400px;
 }
 
 .ipt-card{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: #000;
+    background: rgba(0, 0, 0, 0.07);
 }
 .link-sesion{
     color: #2F2F74;
